@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Full Frontend E‑Store</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html">E‑Store</a>
+
+    <div class="searchWrap">
+      <input id="searchInput" class="input" placeholder="Search products..." />
+      <select id="categorySelect" class="input">
+        <option value="">All Categories</option>
+      </select>
+    </div>
+
+    <nav class="nav">
+      <a href="./orders.html">My Orders</a>
+      <a href="./cart.html">Cart <span id="cartBadge" class="badge">0</span></a>
+      <a href="./login.html" id="loginLink">Login</a>
+      <a href="./register.html" id="registerLink">Register</a>
+      <button class="linklike" id="logoutBtn" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card hero">
+      <h1>Simple E‑commerce Store (Frontend‑only UI)</h1>
+      <p class="muted">
+        Frontend runs on <strong>localhost:5500</strong> (Live Server).
+        Backend API runs on <strong>localhost:4000</strong> (Express + SQLite).
+      </p>
+    </section>
+
+    <section class="sectionHead">
+      <h2>Products</h2>
+      <div id="resultsText" class="muted"></div>
+    </section>
+
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <script type="module" src="./js/products.js"></script>
+</body>
+</html>

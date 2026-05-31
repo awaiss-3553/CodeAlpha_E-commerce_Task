@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html">E‑Store</a>
+    <nav class="nav">
+      <a href="./index.html">Products</a>
+      <a href="./cart.html">Cart <span id="cartBadge" class="badge">0</span></a>
+      <a href="./register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1>Login</h1>
+
+    <form id="loginForm" class="card">
+      <label class="muted small">Email</label>
+      <input class="input" style="width:100%" type="email" id="email" required />
+
+      <label class="muted small">Password</label>
+      <input class="input" style="width:100%" type="password" id="password" required />
+
+      <button class="btn primary" type="submit">Login</button>
+      <p class="muted" id="msg"></p>
+    </form>
+  </main>
+
+  <script type="module">
+    import { setupNav } from "./js/auth.js";
+    import { loadCartBadge } from "./js/cart.js";
+    setupNav();
+    loadCartBadge();
+    import "./js/auth.js";
+  </script>
+</body>
+</html>

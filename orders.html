@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Orders</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html">E‑Store</a>
+    <nav class="nav">
+      <a href="./orders.html">My Orders</a>
+      <a href="./cart.html">Cart <span id="cartBadge" class="badge">0</span></a>
+      <a href="./login.html" id="loginLink">Login</a>
+      <a href="./register.html" id="registerLink">Register</a>
+      <button class="linklike" id="logoutBtn" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>My Orders</h1>
+    <p class="muted small">Orders are loaded from backend SQLite (login required).</p>
+
+    <div id="ordersWrap"></div>
+  </main>
+
+  <script type="module" src="./js/orders.js"></script>
+</body>
+</html>
